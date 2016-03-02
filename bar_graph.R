@@ -10,7 +10,7 @@ bar_graph <- function(data_frame, x, y){
   
   #graph the data frame 
   plot_ly(new_df, x = Species, y = eval(parse(text = y)), type = "bar", 
-          color = toRGB("Black")) %>% 
+          marker = list(color = toRGB("Black"))) %>% 
           layout(title = "Average Dimensions of Each Species") %>% 
   return()
 }
